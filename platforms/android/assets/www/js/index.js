@@ -30,7 +30,7 @@ var app = {
             channel: "parkingstatus-resp",
             message: function(message, env, ch, timer, magic_ch) {
 
-                var currentStatus = Object.keys(message).map(function(key) {
+                var currentStatus = Object.keys(message).reverse().map(function(key) {
                     return codeColor[message[key]]
                 })
                 $('.parking-spot').each(function(i, elem) {
